@@ -26,7 +26,7 @@
   import pandas as pd
   ```
 
-   Pandas 를 이용하여 가공하거나 분석을 한 데이터를 저장 가능
+   `Pandas` 를 이용하여 가공하거나 분석을 한 데이터를 저장 가능
 
   (사용목적에 따라 5가지 저장 방법) [참고](https://tariat.tistory.com/583)
 
@@ -48,10 +48,35 @@
 
 
 
+## 09/05(토) - SQLD
 
+> 08/24 ~ 09/05 2주간 SQLD 자격증 준비 및 시험
+>
+> - 교재 : SQL자격검정실전문제(한국데이터산업진흥원,2020) , SQL개발자기출문제(이기적,2020)
+
+- :heart: 배우게 된 것
+
+  - 트랜잭션(ACID, (원자성, 고립, 지속갱신, 일관전후))
+
+  - 속성과 엔티티, 메인쿼리와 서브쿼리
+
+  - INNER / OUTER JOIN (FULL / LEFT / RIGHT)
+
+  - SQL server / oracle 문법 차이
+
+  - ROLLUP / CUBE / GROUPING SETS
+
+  - RANK / DENSE_RANK / ROW_NUMBER
+
+  - NVL / NULLIF / COALESCE
+
+    
 
 
 ## 09/06(일) 
 
 - :black_heart: 생활코딩 java
   - 초기화와 생성자 ~ (진행중)
+
+
+
