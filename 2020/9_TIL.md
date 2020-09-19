@@ -251,3 +251,9 @@
   - PySpark : 대용량 처리 속도 면 이점, 스타크는 분산 클러스터 용도, 머신러닝 알고리즘 포함
 
     - [공식문서](http://spark.apache.org/docs/latest/api/python/pyspark.mllib.html#module-pyspark.mllib.recommendation)
+
+## 09/19(토)
+
+- :black_heart: 생활코딩 java
+
+  - 예외처리
