@@ -252,8 +252,52 @@
 
     - [공식문서](http://spark.apache.org/docs/latest/api/python/pyspark.mllib.html#module-pyspark.mllib.recommendation)
 
+
+
 ## 09/19(토)
 
 - :black_heart: 생활코딩 java
 
   - 예외처리
+
+
+
+## 09/20(일)
+
+- :black_heart: 생활코딩 java
+
+  - Object 클래스
+    - 모든 클래스가 공통으로 포함하고 있어야 하는 기능을 제공하기 위해서
+    - 모든 클래스는 `class O extends Object {}` Object를 상속받고 있음
+    - Object 클래스의 메소드
+      - toString() : 객체를 문자화시킴
+      - equals() :  다형성, @Override, hashCode(), ???
+      - finalize() : 객체가 소멸될 때 호출되기로 약속된 메소드, 사용은 비추,자제바람
+      - 가비지컬렉션(Garbage Collection, 이하 GC)
+      - clone() : 복제
+
+- 상수와 enum(자바1.5부터)
+
+  - interface : 인터페이스에서 선언된 변수는 무조건 public static final의 속성을 갖는다
+
+  - class :  `==`다른 카테고리 상수 비교 금지, switch 문 못씀 
+
+    - ```java
+      public static final Fruit APPLE  = new Fruit();
+      ```
+
+  - enum : 열거형
+
+    - 생성자의 접근 제어자가 private이다. 그것이 클래스 Fruit를 인스턴스로 만들 수 없다는 것 ???
+    - 클래스와 이름이 같은 메소드는 생성자
+
+
+
+## 09/21(월)
+
+- :black_heart: 생활코딩 java 2회차 복습
+  - 숫자,문자, 변수, 주석, 세미콜론, 데이터타입, 형변환, 연산자, 비교, 불린, 조건문, 논리연산자, 반복문
+  - 배열, 메소드, 입출력, 객체지향프로그래밍, 클래스, 인스턴스, 객체, 맴버
+
+- :green_heart: Jump to Python 2회차 복습
+  - 자료형 : 숫자형 ,문자열 자료형, 리스트 자료형
