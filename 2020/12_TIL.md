@@ -4,7 +4,9 @@
 
 :purple_heart: Java
 
-[인프런-스프링입문_김영한](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8#)
+ 1 [인프런-스프링입문_김영한](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8#)
+
+2 
 
 :green_heart: Python
 
@@ -185,5 +187,13 @@
     - MariaDB, Aurora(AWS 클라우드 환경 고려), PostgreSQL
 - CloudFront CDN, S3와 연결해서 사용할 수 있다. 
   - [용어] CDN : Content Delivery Network 의 약어, 전 세계에 전략적으로 분산되어있는 서버 네트워크입니다(지리적으로) / 예를 들어 해외 반대편 파일을 매번 가져온다면 지연이 생길 것입니다 이를 보안하여 인근에 CDN서버으로 파일(복제)을 캐시해서 사용하는 것
-- 데브옵스
+- 데브옵스 : 개발과 운영을 별개로 보지 않고 함께 하는 것을 지향하는 문화.
+  - CI/CD 
+  - 모니터링
+  - 로깅
 
+
+
+## 12/19(토)
+
+:purple_heart: Java 
