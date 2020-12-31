@@ -4,9 +4,9 @@
 
 :purple_heart: Java
 
- 1 [인프런-스프링입문_김영한](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8#)
+1 [인프런-스프링입문_김영한](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%EC%9E%85%EB%AC%B8-%EC%8A%A4%ED%94%84%EB%A7%81%EB%B6%80%ED%8A%B8#)
 
-2 
+2 [인프런-스프링핵심-김영한](https://www.inflearn.com/course/%EC%8A%A4%ED%94%84%EB%A7%81-%ED%95%B5%EC%8B%AC-%EC%9B%90%EB%A6%AC-%EA%B8%B0%EB%B3%B8%ED%8E%B8)
 
 :green_heart: Python
 
@@ -197,3 +197,126 @@
 ## 12/19(토)
 
 :purple_heart: Java 
+
+
+
+## 12/30(수) - AJAX
+
+:handshake: 
+
+- HTML의 구조 
+
+  ```html
+  <!DOCTYPE HTML>
+  <html>
+      <head>
+          <title></title>
+          //link css
+      </head>
+      <body>
+          //라이브러리
+          <script></script>
+      </body>
+  </html>
+  ```
+
+-  동기요청 
+  - Form 요청
+
+- AJAX (비동기요청)
+
+  - $.ajax
+
+  - ```html
+    // 기본 형식
+    <input type="button" id="exe" value="submit" />
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+    	$('#exe').click(function(){
+            $.ajax({
+                url:'/',
+                ...
+                success:function(data){
+                    console.log(data);
+                },
+                errer:function(e) {
+                     console.log("Error",e);
+                }
+            })
+        })
+    </script>
+    ```
+
+  - AJAX로 Form의 POST 요청
+
+    ```html
+    <form action = "/content" accept-charset="utf-8" id="ajaxForm" method = "post">
+        ...
+        <input type="button" id="exe" value="submit" />
+    </form>
+    // 보낸 것 보기
+    <div id="result"> </div>
+    
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        $('#exe').click(function(){
+            // $("#ajaxForm") 는 $("Form[id=ajaxForm]")
+            // document.getElementById(); 바닐라자바스크립트형식
+            var queryString = $("#ajaxForm").serialize();
+            $.ajax({
+                url:'/content',
+                type:'post',
+                data:queryString,
+                success:function(data){
+                    console.log(data); //브라우저가 JSON으로 알아서
+                     $("#result").text(JSON.stringify(data));
+                    // JSON > String으로 변환해서 보기
+                },
+            })
+        })
+    </script>
+    ```
+
+  - AJAX의 GET요청 / 배열로 목록이 나올 때
+
+    ```html
+    // 버튼을 눌렀을 때 목록들이 다 나옴
+    <div id="result"> </div>
+    <input type="button" id="exe" value="submit" />
+    
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script>
+        $('#exe').click(function(){
+            //var queryString = $("#ajaxForm").serialize();
+            $.ajax({
+                url:'/content',
+                type:'get',
+                //data:queryString,
+                success:function(data){
+                    console.log(data);
+                    // 전부 출력
+                    // for(var i in data.content){
+                    //     for(var item in data.content[i]){
+                    //         console.log(data.content[i][item]);
+                    //     }
+                    // }
+                    // 특정 값 출력
+                    for(var i in data.content){
+                            console.log(data.content[i].id);
+                            // $("#result").append(data.content[i].id);
+                            $("#result").append("<h5>"+data.content[i].id+"</h5>");
+                    }
+    
+                    // $("#result").text(JSON.stringify(data));
+                    // $("#result").text(data.content[0].id);
+    
+                },
+                error:function (e){
+                    console.log("Error",e);
+                }
+            })
+        })
+    </script>
+    ```
+
+    - jQuery 메서드 
