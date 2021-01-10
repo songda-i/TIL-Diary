@@ -1,7 +1,4 @@
-# TIL-Diary
-Today I Learned : Study Diary 간략한 기록
-
-> 2020~
+# 1_TIL-Diary
 
 :purple_heart: Java
 
@@ -14,3 +11,7 @@ Today I Learned : Study Diary 간략한 기록
 :heart: 개념/용어
 
 :blue_heart: 글/영상
+
+## 01/10(일)
+
+정규식 https://regexr.com/
