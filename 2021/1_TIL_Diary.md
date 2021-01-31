@@ -37,7 +37,7 @@ $ vue create my-project
 $ npm run serve
 ```
 
-
+![image-20210126235213779](C:1_TIL_Diary.assets\image-20210126235213779.png)
 
 ## 01/26(화)
 
