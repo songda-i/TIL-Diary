@@ -33,3 +33,6 @@ ISTIO(이스티오)
 ## 11/28(목)
 :green_heart: AWS
 인증서
+
+## 11/29(금)
+:green_heart: AWS
