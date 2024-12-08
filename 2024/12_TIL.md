@@ -2,7 +2,6 @@
 
 :purple_heart: Java
 
-
 :green_heart: 인프라 - AWS
 
 :handshake: PJT업무
@@ -15,8 +14,16 @@
 
 :books: 책/강의
 
-
-
-## 12/1(일)
+---
 :purple_heart: Java
 
+자료 java-basic-v20241111
+1.인강/0.자바/2.자바-기본
+![alt text](/12_TIL.assets/image.png)
+
+---
+
+## 12/5(목)
+:purple_heart: Java
+
+[1] 클래스와 데이터
