@@ -24,5 +24,8 @@
 
 ## 1/1(수)
 :purple_heart: Java
-
 [2] 기본형과 참조형
+
+## 1/11(토)
+:green_heart: AWS
+SAA
