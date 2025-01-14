@@ -29,3 +29,11 @@
 ## 1/11(토)
 :green_heart: AWS
 SAA
+
+## 1/14(화)
+:green_heart: AWS
+- Load Balancer(LB)
+- AWS 의 Elastic Load Balancing(ELB) 유형
+  - Application Load Balancer (ALB)
+  - Network Load Balancer (NLB)
+  - Gateway Load Balancer (GWLB)
