@@ -1,4 +1,4 @@
-# 2_TIL_Private
+# 4_TIL_Private
 
 :purple_heart: Java
 
@@ -16,6 +16,5 @@
 
 ---
 
-## 2/1(토)
-:green_heart: AWS
-SAA
+## 4/11(금)
+:purple_heart: Java
