@@ -53,7 +53,7 @@
     - public : 클래스명과 파일명 이름 동일, 1개만 등장
     - default : N개 가능
 
-## 4/18(목)
+## 4/18(금)
 :purple_heart: Java Review
 - 자바메모리구조 📌
     - 메서드 영역 (static)
@@ -62,7 +62,7 @@
         - 힙 영역 안에 인스턴스가 참조하는 곳을 모두 잃게 된 경우 GC가비지컬렉션 대상이 됨
         
 
-## 4/19(금)
+## 4/19(토)
 :purple_heart: Java Review
 - 변수
     - (단독) 인스턴스변수 // 힙영역,GC삭제까지삼 // 동적
@@ -72,4 +72,14 @@
 - static 
     - static 변수 = 정적변수 = 클래스변수
     - static 메서드 = 정적메서드 = 클래스메서드
-    - 사용 예) 상수(환경변수,고정URL), 유틸리티 기능 등
+        - static 안에는 static 쓰기 📌
+    - 사용 예) 상수(전역설정값,환경변수,고정URL), 유틸리티 기능, 각 인스턴스에게 고유번호부여 등
+
+## 4/20(일)
+:purple_heart: Java Review
+- final
+    - 상수 public static final CONST_VALUE = 1;
+        - 효과) 메서드영역으로 1개만 써서 메모리낭비 줄임, 상수로 고정된 값 사용
+    - 참조형변수 final Data data = new Data(); // 객체의 참조값 변경불가 
+                [X] data = new Data(); // 컴파일 오류남(불가)
+                [O] data.value = 20; //그러나, 그 객체의 내부 값은 변경가능
