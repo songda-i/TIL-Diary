@@ -111,8 +111,29 @@ public abstract class GasCar extends Car
 - 상속 super
     - super.변수
     - super.메서드()
-    - super() // 기본형 부모 생성자
+    - super(...) // 부모 생성자
+        - 맨 첫 줄 
+        - super() // 기본형 생략가능
+        - super(), this() 같이 못 씀 
+
+
 
 ## 4/22(화)
 :purple_heart: Java Review
 - 다형성
+    -다형적 참조 : 다양한 형태를 참조할 수 있다.
+
+        - 부모는 자식을 품을 수 있다.
+        - 부모 타입의 변수는 자식 타입(하위) 인스턴스 참조할 수 있다. 
+        - Parent poly = new Child()
+        실행) 참조값(주소)을 사용해 인스턴스를 찾는다. 그 안의 실행할 타입 찾는다.
+        단, 부모 타입을 찾고(올라갈 수 있음), 자식으로 내려올 순 없음.
+    - cast
+        - 업캐스팅 
+            Parent poly = (Parent) child
+            Parent poly = child     // 생략가능 권장
+            - 안전 : 인스턴스 내부에 부모가 모두 생생되어있음 
+        - 다운캐스팅 
+            - 위험
+    
+다형성 왜 필요할까? 퉁쳐서 쓸 필요가 있어서
