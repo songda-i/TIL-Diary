@@ -83,3 +83,36 @@
     - 참조형변수 final Data data = new Data(); // 객체의 참조값 변경불가 
                 [X] data = new Data(); // 컴파일 오류남(불가)
                 [O] data.value = 20; //그러나, 그 객체의 내부 값은 변경가능
+
+
+- 상속
+    - 자바 : 단일상속(부모1개) / class 자식 extends 부모
+        - 메서드 오버라이딩(Overriding) : 부모 메서드를 자식이 다르게 재정의
+            - @Override 어노테이션
+            필수 아님(없어도 동작 함), 그러나 붙였는데 부모 메서드 없으면 오류남
+            - 조건 📌
+                - '[X] 생성자, static, final, private 불가
+                - 예외 : 자식이 더 많이 throws 불가
+                - 접근제어자 : 자식이 더 제한적인 접근제어자 불가
+                - 이름, 매개변수, 반환타입 같아야함
+
+- 오버로딩 vs 오버라이딩
+    - 오버로딩 : 과적, 같은이름 메서드의 다른매개변수 ex.계산기
+    - 오버라이딩 : 타고오름 상속, 부모기능을 자식이 재정의
+
+- 추상화, 인터페이스  📌
+```java
+abstract
+public abstract class GasCar extends Car
+```
+
+## 4/21(월)
+:purple_heart: Java Review
+- 상속 super
+    - super.변수
+    - super.메서드()
+    - super() // 기본형 부모 생성자
+
+## 4/22(화)
+:purple_heart: Java Review
+- 다형성
