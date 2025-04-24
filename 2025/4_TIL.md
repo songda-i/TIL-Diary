@@ -121,19 +121,110 @@ public abstract class GasCar extends Car
 ## 4/22(화)
 :purple_heart: Java Review
 - 다형성
-    -다형적 참조 : 다양한 형태를 참조할 수 있다.
+    - 다형적 참조 : 다양한 형태를 참조할 수 있다.
 
         - 부모는 자식을 품을 수 있다.
-        - 부모 타입의 변수는 자식 타입(하위) 인스턴스 참조할 수 있다. 
+        - 부모 타입의 변수는 자식 타입(하위) 인스턴스 참조할 수 있다.
         - Parent poly = new Child()
         실행) 참조값(주소)을 사용해 인스턴스를 찾는다. 그 안의 실행할 타입 찾는다.
         단, 부모 타입을 찾고(올라갈 수 있음), 자식으로 내려올 순 없음.
+
+## 4/23(수)
+:purple_heart: Java Review
+- 다형성
     - cast
         - 업캐스팅 
-            Parent poly = (Parent) child
-            Parent poly = child     // 생략가능 권장
-            - 안전 : 인스턴스 내부에 부모가 모두 생생되어있음 
+            - 안전 : 인스턴스 내부에 부모가 모두 생생되어있음
+            Child child = new Child(); 는 위 상속 다 가지고 생성됨
+            1) Parent poly = (Parent) child
+            2) Parent poly = child     // 생략가능 권장
+             
         - 다운캐스팅 
-            - 위험
-    
+            - 위험 : 인스턴스 내부에 자식이 없어서 자식만의 정보 못 씀 
+            ```
+            Parent poly1 = new Child();
+            1) Child poly2 = (Child) poly1; (가능) O
+            poly2.childMethod() (가능/불가)?
+             : 
+            Parent parent = new Parent();
+            1) Child poly = (Child) parent; (불가!) X
+             : 자식은 부모를 품을 수 없다.
+            ```
+
+
+정리
+---
+
+### 🔁 다형성 (Polymorphism)
+- **부모 타입의 참조변수**로 **자식 객체를 참조**할 수 있음.
+- 실제 인스턴스는 자식이지만, 참조는 부모 타입 → 이게 **업캐스팅**
+
+---
+
+### ⬆️ 업캐스팅 (Upcasting)
+```java
+Child child = new Child();
+
+// 업캐스팅
+Parent parent1 = (Parent) child;  // 명시적 캐스팅 (생략 가능)
+Parent parent2 = child;          // 암시적 캐스팅
+```
+
+- **항상 안전함**: 자식은 부모를 "포함"하므로, 부모 타입으로 변환해도 문제 없음.
+- 단, **부모 타입에서 정의된 멤버까지만 접근** 가능함.
+```java
+parent.parentMethod();   // ✅ 가능
+parent.childMethod();    // ❌ 에러! Parent 타입엔 없음
+```
+
+---
+
+### ⬇️ 다운캐스팅 (Downcasting)
+```java
+Parent parent = new Child();  // 업캐스팅된 상태
+
+// 다운캐스팅
+Child child = (Child) parent;  // 가능, 실제 인스턴스가 Child라면 OK
+child.childMethod();         // 자식 고유 메서드 호출 가능
+
+parent.childMethod();   // ❌ 안 됨 (Parent 타입이라서)
+child.childMethod();    // ✅ 다운캐스팅 후 자식 기능 사용 가능
+```
+
+- **항상 가능한 건 아님!**  
+  - 부모 타입 참조가 실제로 자식 객체를 가리키고 있을 때만 가능함.
+
+```java
+Parent parent = new Parent();
+Child child = (Child) parent;  // ❌ 런타임 오류(ClassCastException)
+```
+
+- 부모 객체는 자식 클래스의 멤버를 갖고 있지 않기 때문에 위험함.
+
+---
+
+### 🧠 핵심 요약
+| 캐스팅 종류   | 방향             | 안전성 | 설명 |
+|--------------|------------------|--------|------|
+| 업캐스팅     | 자식 → 부모       | 안전함 ✅ | 자동 또는 명시적 캐스팅 가능 |
+| 다운캐스팅   | 부모 → 자식       | 위험함 ⚠️ | 명시적 캐스팅 필요, 실제 타입 확인 필요 (`instanceof` 등) |
+
+---
+
+필요하면 `instanceof`로 타입 체크 후 다운캐스팅하면 안전:
+```java
+if (parent instanceof Child) {
+    Child child = (Child) parent;
+    child.childMethod();
+}
+```
+
+---
+
+
+## 4/24(목)
+:purple_heart: Java Review
+- 다형성
+    -다형적 참조 : 
+    -메서드 오버라이딩 : parent.메서드() 해도 @Override child.메서드() 있으면, 오버라이딩된게 우선순위
 다형성 왜 필요할까? 퉁쳐서 쓸 필요가 있어서
