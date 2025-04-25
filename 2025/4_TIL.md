@@ -252,6 +252,7 @@ DRY : Do not Repeat Yourself
 
 도구 : https://jupyter.org/try-jupyter/lab/
 자료 : 점프 투 파이썬 https://wikidocs.net/book/1
+영상 : NICE IMAGE CLUB https://youtu.be/hTHFJdFaFEc?si=alLPl1QAE4Dm8QFm
 
 연산(데이터 타입에 따름), 함수, 제어문(반복문,조건문)
 
@@ -267,15 +268,35 @@ DRY : Do not Repeat Yourself
     - 딕셔너리['키값'] = 데이터 
 
 함수
--print()
--sum([1],2) 
-*주피터노트북에서 함수 끝에 shift+tap 하면 함수 쓰는 법 나옴 
+- python 내장형 함수
+    -print()
+    -sum([1],2) 
+    *주피터노트북에서 함수 끝에 shift+tap 하면 함수 쓰는 법 나옴 
+- 사용자정의 함수 : 코드를 재사용하기 위해 코드에 이름을 붙이기
+```python
+def 함수이름(매개변수):
+    재사용하고 싶은 코드
+    return 데이터
+```
 
 반복문
-1) for문
+1) for문 : 범위가 정해질 때
 for 변수 in 순서있는 자료구조 :
     반복할 코드
 
-2) while문 - 조건이 참일 동안 반복
+2) while문 - 조건이 참일 동안 반복, 범위를 잘 모름
 while 조건 : 
     반복할 코드
+    조건 업데이트
+
+조건문
+if 조건1:
+    조건1이 참일 때 실행되는 코드
+elif 조건2:
+    조건2이 참일 때 실행되는 코드
+...
+else:
+    위의 조건들 빼고 나머지 경우
+
+모듈
+- 특정 주제에 따라 어떤 기능들을 모아놓은 도구상자
