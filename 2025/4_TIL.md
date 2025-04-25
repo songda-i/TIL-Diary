@@ -2,7 +2,9 @@
 
 :purple_heart: Java
 
-:green_heart: 인프라 - AWS
+:green_heart: Python
+
+:black_heart: 인프라
 
 :handshake: PJT업무
 
@@ -116,8 +118,6 @@ public abstract class GasCar extends Car
         - super() // 기본형 생략가능
         - super(), this() 같이 못 씀 
 
-
-
 ## 4/22(화)
 :purple_heart: Java Review
 - 다형성
@@ -150,7 +150,6 @@ public abstract class GasCar extends Car
             1) Child poly = (Child) parent; (불가!) X
              : 자식은 부모를 품을 수 없다.
             ```
-
 
 정리
 ---
@@ -221,10 +220,25 @@ if (parent instanceof Child) {
 
 ---
 
-
 ## 4/24(목)
 :purple_heart: Java Review
 - 다형성
-    -다형적 참조 : 
-    -메서드 오버라이딩 : parent.메서드() 해도 @Override child.메서드() 있으면, 오버라이딩된게 우선순위
-다형성 왜 필요할까? 퉁쳐서 쓸 필요가 있어서
+    - 다형적 참조 : 부모 타입의 변수는 자식 타입(하위) 인스턴스 참조할 수 있다.
+    - 메서드 오버라이딩 : parent.메서드() 해도 @Override child.메서드() 있으면, 오버라이딩된게 우선순위
+
+다형성 왜 필요할까? 퉁쳐서 쓸 필요가 있어서 (ex.Object, print())
+
+- 추상화 abstract :**제약** 걸어주기
+    - 추상화 클래스: 인스턴스 생성 못함
+    - 추상화 메서드: 자식클래스에 꼭 @Override 해야 할 메서드 명시
+
+- 순수 추상 클래스 (모두 추상화) => 인터페이스 
+
+- 인터페이스 interface
+    - 메서드 public abstract 생략 권장
+    - 멤버 변수 public static final 생략 권장
+    - 다중 **구현**(상속) 가능
+    - implements
+    - 특이사항 )
+        - 자바8 interface의 default 메서드 구현가능
+        - 자바9 interface의 private 메서드 구현가능
