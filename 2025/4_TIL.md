@@ -242,3 +242,40 @@ if (parent instanceof Child) {
     - 특이사항 )
         - 자바8 interface의 default 메서드 구현가능
         - 자바9 interface의 private 메서드 구현가능
+
+- 클래스 vs 인터페이스
+
+## 4/25(금)
+DRY : Do not Repeat Yourself
+
+:green_heart: Python Review
+
+도구 : https://jupyter.org/try-jupyter/lab/
+자료 : 점프 투 파이썬 https://wikidocs.net/book/1
+
+연산(데이터 타입에 따름), 함수, 제어문(반복문,조건문)
+
+자료구조 : 리스트, 딕셔너리, 튜플, 셋
+
+공통 : 데이터 꺼낼 때 대괄호[] 사용
+.(dot)
+
+함수 ()
+리스트 []
+딕셔너리 {}
+    - 딕셔너리 = {'키값':value, '키값':value, ...}
+    - 딕셔너리['키값'] = 데이터 
+
+함수
+-print()
+-sum([1],2) 
+*주피터노트북에서 함수 끝에 shift+tap 하면 함수 쓰는 법 나옴 
+
+반복문
+1) for문
+for 변수 in 순서있는 자료구조 :
+    반복할 코드
+
+2) while문 - 조건이 참일 동안 반복
+while 조건 : 
+    반복할 코드
