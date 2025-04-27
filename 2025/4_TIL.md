@@ -248,7 +248,7 @@ if (parent instanceof Child) {
 ## 4/25(금)
 DRY : Do not Repeat Yourself
 
-:green_heart: Python Review
+:green_heart: Python Review (문법)
 
 도구 : https://jupyter.org/try-jupyter/lab/
 자료 : 점프 투 파이썬 https://wikidocs.net/book/1
@@ -261,16 +261,17 @@ DRY : Do not Repeat Yourself
 공통 : 데이터 꺼낼 때 대괄호[] 사용
 .(dot)
 
-함수 ()
-리스트 []
-딕셔너리 {}
+구분
+- 함수 ()
+- 리스트 []
+- 딕셔너리 {}
     - 딕셔너리 = {'키값':value, '키값':value, ...}
     - 딕셔너리['키값'] = 데이터 
 
 함수
 - python 내장형 함수
-    -print()
-    -sum([1],2) 
+    - print()
+    - sum([1],2) 
     *주피터노트북에서 함수 끝에 shift+tap 하면 함수 쓰는 법 나옴 
 - 사용자정의 함수 : 코드를 재사용하기 위해 코드에 이름을 붙이기
 ```python
@@ -281,15 +282,19 @@ def 함수이름(매개변수):
 
 반복문
 1) for문 : 범위가 정해질 때
+```python
 for 변수 in 순서있는 자료구조 :
     반복할 코드
-
+```
 2) while문 - 조건이 참일 동안 반복, 범위를 잘 모름
+```python
 while 조건 : 
     반복할 코드
     조건 업데이트
+```
 
 조건문
+```python
 if 조건1:
     조건1이 참일 때 실행되는 코드
 elif 조건2:
@@ -297,6 +302,18 @@ elif 조건2:
 ...
 else:
     위의 조건들 빼고 나머지 경우
-
+```
 모듈
 - 특정 주제에 따라 어떤 기능들을 모아놓은 도구상자
+    - import 모듈명
+    - from 모듈명 import 모듈함수명
+
+## 4/26(토)
+:green_heart: Python
+
+컴프리헨션 종류
+- 리스트 컴프리헨션: [표현식 for 항목 in 반복가능객체 if 조건식]
+- 집합 컴프리헨션: {표현식 for 항목 in 반복가능객체 if 조건식}
+- 딕셔너리 컴프리헨션: {키:값 for 항목 in 반복가능객체 if 조건식}
+- 제너레이터 표현식: (표현식 for 항목 in 반복가능객체 if 조건식)
+
