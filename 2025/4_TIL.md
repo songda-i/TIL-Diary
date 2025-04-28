@@ -311,9 +311,16 @@ else:
 ## 4/26(토)
 :green_heart: Python
 
+**comprehension**
+list/set/dict 
 컴프리헨션 종류
 - 리스트 컴프리헨션: [표현식 for 항목 in 반복가능객체 if 조건식]
 - 집합 컴프리헨션: {표현식 for 항목 in 반복가능객체 if 조건식}
 - 딕셔너리 컴프리헨션: {키:값 for 항목 in 반복가능객체 if 조건식}
 - 제너레이터 표현식: (표현식 for 항목 in 반복가능객체 if 조건식)
 
+## 4/27(일)
+:green_heart: Python
+
+## 4/28(월)
+:green_heart: Python
