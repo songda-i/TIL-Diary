@@ -324,3 +324,6 @@ list/set/dict
 
 ## 4/29(화)
 :purple_heart: Java Review
+- OCP원칙
+- 디자인패턴 
+    - 전략패턴
