@@ -324,8 +324,14 @@ list/set/dict
 
 ## 4/29(화)
 :purple_heart: Java Review
-- OCP원칙
-- 디자인패턴 
+- **OCP** (Open-Closed Principle)원칙
+    - 기존 핵심코드의 수정없이 새로운 기능을 추가한다.
+        - Open for extension 확장에 열려있다
+            - 인터페이스로 구현해서 얼마든지 추가추가
+        - Closed for modification 수정에 닫혀있다
+            - 추가할 때, 어딘가는 코드 수정이 필요하나
+            영향 받는 중요한 클라이언트의 코드는 변하지 않는다.
+- 디자인패턴
     - 전략패턴
 
 ## 4/30(수)
