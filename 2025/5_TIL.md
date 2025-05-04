@@ -23,6 +23,9 @@
 
 package java.lang (당연해서 import 생략가능)
 - 묵시적(Implicit) vs 명시적(Explicit)
+    - 묵시적 : 자동으로 함
+    - 명시적 : 말해줘야 함
+
 - Object 클래스 : 최상위 부모클래스
     - 모든 객체에 필요한 공통 기능 제공, 다형성의 기본구현
         - toString(), equals(), getClass()...
@@ -40,5 +43,18 @@ package java.lang (당연해서 import 생략가능)
     System.out.println(ref);
     ```
  
-## 5/3(토)
+## 5/4(일)
 :purple_heart: Java Review
+> Object 객체의 대표메서드 : toString(), equals()
+- toString() : 객체의 문자열 정보
+    - println() - 내부에서 toString() 호출하기
+    - toString() 오버라이딩해서 사용하기
+
+- 같다
+    - 동일성(Identity) : 물리적, `==`연산자, 참조가 동일한 객체를 가르키는지, 완전히 같음
+    - 동등성(Equality) : 논리적, `equals()`메서드, 두 객체의 내용물이 같은지, 같은 가치와 수준 의미(형태나 외관이 완전히 같지 않음)
+
+- 자바 데이터 타입
+    - 기본형(Primitive Type) : 공유X
+    - 참조형(Reference Type) : 공유O
+
