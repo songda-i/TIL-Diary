@@ -54,6 +54,7 @@ package java.lang (당연해서 import 생략가능)
     - 동일성(Identity) : 물리적, `==`연산자, 참조가 동일한 객체를 가르키는지, 완전히 같음
     - 동등성(Equality) : 논리적, `equals()`메서드, 두 객체의 내용물이 같은지, 같은 가치와 수준 의미(형태나 외관이 완전히 같지 않음)
 
+> 불변 객체
 - 자바 데이터 타입
     - 기본형(Primitive Type) : 공유X
     - 참조형(Reference Type) : 공유O
@@ -61,6 +62,9 @@ package java.lang (당연해서 import 생략가능)
 - 가변(Mutable) 객체 vs 불변(Immutable) 객체
     - 가변 객체
     - 불변 객체 : `final` 값을 변경할 수 없게 함
-        - 주의 ) 불변 객체에서 변경과 관련된 메서드들은 보통 객체를 새로 만들어서(new) 반환하기 때문에 , 꼭 반환값을 받아야한다.
+        - 주의 ) 불변 객체에서 변경과 관련된 메서드들은
+            - 보통 객체를 새로 만들어서(new) 반환하기 때문에 , 꼭 `반환값`을 받아야한다.
+            - `with` 시작하는 명칭을 쓴다. 
+                "coffee with sugar"
         - 예 )  String, Integer, LocalDate 등 클래스
         - 이유 ) 캐시 안정성, 멀티 쓰레드 안정성, 엔티티의 값 타입
