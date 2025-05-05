@@ -58,3 +58,6 @@ package java.lang (당연해서 import 생략가능)
     - 기본형(Primitive Type) : 공유X
     - 참조형(Reference Type) : 공유O
 
+- 가변(Mutable) 객체 vs 불변(Immutable) 객체
+    - 가변 객체
+    - 불변 객체 : final 
