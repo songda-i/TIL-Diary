@@ -43,7 +43,21 @@ package java.lang (당연해서 import 생략가능)
     String ref = Integer.toHexString(System.identityHashCode(dog));
     System.out.println(ref);
     ```
- 
+
+- System.out.println(객체);
+해당 객체의 toString() 메서드가 호출됩니다.
+
+1. 만약 toString()을 오버라이드하지 않았다면?
+기본적으로 Object 클래스의 toString()이 호출됩니다.
+
+    이때 결과는:
+    클래스이름@해시코드(16진수)
+    예: lang.wrapper.MyInteger@2f4d3709
+
+2. toString()을 오버라이드했다면?
+만약 객체 클래스에서 toString()을 오버라이드했다면,
+System.out.println(객체)는 오버라이드된 내용을 출력
+
 ## 5/4(일)
 :purple_heart: Java Review
 > Object 객체의 대표메서드 : toString(), equals()
@@ -75,11 +89,12 @@ package java.lang (당연해서 import 생략가능)
 > String 클래스
 
 - 비교
-    - 문자열 비교는 `equals()`메서드 사용
+    - 문자열 비교는 `equals()`메서드 사용 ☆
     - 동일성(Identity) : 물리적, `==`연산자 / 사용 X
         - " " 문자열 리터럴 일 때, `문자열 풀 Pool` 사용으로 같게 됨
     - 동등성(Equality) : 논리적, `equals()`메서드 / 사용 O
         - " ", new String(" ") 둘 다 같게 됨
+        - 안에 내용물이 같은지가 중요함
 * Pool
     - 풀 : 공용 자원 모아둔 곳
     - 문자열 풀은 힙 영역을 사용
@@ -91,25 +106,42 @@ package java.lang (당연해서 import 생략가능)
         변경이 필요한 경우 기존 값을 변경하지 않고, 
         대신에 새로운 결과를 만들어서 반환한다
 
-- 메서드 체인닝 - Method Chaining
-    - 메서드 호출 결과 =  인스턴스 자기 자신의 참조값(주소)을 반환 return this
-
-- String (불변) vs StringBuilder (가변)
+* String (불변) vs StringBuilder (가변)
 
 - StringBuilder - 가변 String
     - 성능 최적화 : 새로운 객체를 만들지 않음 
     - 삽삭갱뒤집기 append(), insert(), delete(), reverse() 등
     - toString 메소드를 사용해 StringBuilder의 결과를 기반으로 String을 생성해서 반환
-    - StringBuilder().append().append()....toString() // 메서드 체이닝
+        - 메서드 체인닝 - Method Chaining
+            - ex. StringBuilder().append().append()....toString()
+        - 메서드 호출 결과 =  인스턴스 자기 자신의 참조값(주소)을 반환 return this
     - 직접 StringBuilder 쓸 때 (최적화)
         - 반복문에서 반복해서 문자를 연결할 때
         - 조건문을 통해 동적으로 문자열을 조합할 때
         - 복잡한 문자열의 특정 부분을 변경해야 할 때
         - 매우 긴 대용량 문자열을 다룰 때
 
-- StringBuilder vs StringBuffer
+* StringBuilder vs StringBuffer
     - StringBuilder : 빠름
     - StringBuffer : 느림, 멀티스레드에서 안전
-        - list Vector
+        - list의 Vector
 
+> 래퍼(Wrapper) 클래스 : 기본형의 객체 버전
+- 기본형 vs 래퍼클래스
+    - 기본형(Primitive Type)은 데이터조각임 : 객체 아님. 메서드 없음. null값 없음
+    - 특정 기본형을 감싸서(Wrap) 만든 클래스를 래퍼 클래스 : 객체임
 
+        | 기본형 (Primitive Type) | 래퍼 클래스 (Wrapper Class) |
+        | -------------------- | ---------------------- |
+        | `byte`               | `Byte`                 |
+        | `short`              | `Short`                |
+        | `int`                | `Integer`              |
+        | `long`               | `Long`                 |
+        | `float`              | `Float`                |
+        | `double`             | `Double`               |
+        | `char`               | `Character`            |
+        | `boolean`            | `Boolean`              |
+
+        - 자바는 기본형에 대응하는 래퍼 클래스를 기본으로 제공
+
+        - 기본 래퍼 클래스 특징 : 불변, equals 로 비교해야 한다.
