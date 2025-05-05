@@ -94,17 +94,22 @@ package java.lang (당연해서 import 생략가능)
 - 메서드 체인닝 - Method Chaining
     - 메서드 호출 결과 =  인스턴스 자기 자신의 참조값(주소)을 반환 return this
 
-- 합치기
-    - `+`
+- String (불변) vs StringBuilder (가변)
+
+- StringBuilder - 가변 String
+    - 성능 최적화 : 새로운 객체를 만들지 않음 
+    - 삽삭갱뒤집기 append(), insert(), delete(), reverse() 등
+    - toString 메소드를 사용해 StringBuilder의 결과를 기반으로 String을 생성해서 반환
     - StringBuilder().append().append()....toString() // 메서드 체이닝
-        - 직접 StringBuilder 쓸 때
-            - 반복문에서 반복해서 문자를 연결할 때
-            - 조건문을 통해 동적으로 문자열을 조합할 때
-            - 복잡한 문자열의 특정 부분을 변경해야 할 때
-            - 매우 긴 대용량 문자열을 다룰 때
+    - 직접 StringBuilder 쓸 때 (최적화)
+        - 반복문에서 반복해서 문자를 연결할 때
+        - 조건문을 통해 동적으로 문자열을 조합할 때
+        - 복잡한 문자열의 특정 부분을 변경해야 할 때
+        - 매우 긴 대용량 문자열을 다룰 때
 
 - StringBuilder vs StringBuffer
     - StringBuilder : 빠름
     - StringBuffer : 느림, 멀티스레드에서 안전
+        - list Vector
 
 
