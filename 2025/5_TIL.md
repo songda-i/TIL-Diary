@@ -143,5 +143,44 @@ System.out.println(객체)는 오버라이드된 내용을 출력
         | `boolean`            | `Boolean`              |
 
         - 자바는 기본형에 대응하는 래퍼 클래스를 기본으로 제공
+        - 기본 래퍼 클래스 특징 : 불변, `equals()` 로 비교해야 한다.
 
-        - 기본 래퍼 클래스 특징 : 불변, equals 로 비교해야 한다.
+## 5/6(화)
+:purple_heart: Java Review
+> Eunm 열거 (enumeration)
+- 비교 : `==` 사용 
+    - `equals()` 비추
+
+* 타입 안전 열거형 패턴 (Type-Safe Enum Pattern)
+    ```java
+    public class ClassGrade {
+        public static final ClassGrade BASIC = new ClassGrade();
+        public static final ClassGrade GOLD = new ClassGrade();
+        public static final ClassGrade DIAMOND = new ClassGrade();
+        //private 생성자 추가 : new 인스턴스 외부 생성 불가
+        private ClassGrade() {}
+    }
+    ```
+* 열거형(Enum Type)
+    ```java
+    public enum Grade {
+        BASIC, GOLD, DIAMOND
+    }
+     ```
+    ```java
+    import java.lang.Enum
+
+    public class Grade extends Eunm{
+        public static final Grade BASIC = new Grade();
+        public static final Grade GOLD = new Grade();
+        public static final Grade DIAMOND = new Grade();
+        //private 생성자 추가
+        private Grade() {}
+    }
+    ```
+- 장점
+    - 데이터 일관성 및 타입 안정성 : 정해진 값만 사용
+    - 확장성 : EUNM 새로운 상수 추가
+    - 간결성 : `static import` ?
+    - switch문 사용가능 ?
+
