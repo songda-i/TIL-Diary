@@ -187,3 +187,17 @@ System.out.println(객체)는 오버라이드된 내용을 출력
 ## 5/7(수)
 :purple_heart: Java Review
 > 날짜와 시간
+
+## 5/8(목)
+:purple_heart: Java Review
+> 중첩(Nested)클래스, 내부(Inner)클래스
+
+중첩(Nested) 클래스 : 내 안의 다른 것
+내부(Inner) 클래스 : 내 안의 나, 나의 내부에서 나를 구성하는 것
+
+중첩 클래스는 총 4가지, 크게 2가지로 분류
+- ① 정적 중첩 클래스 : static 있음
+- 내부 클래스 종류
+    - ② 내부 클래스
+    - ③ 지역 클래스
+    - ④ 익명 클래스
