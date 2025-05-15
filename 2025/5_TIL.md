@@ -209,3 +209,12 @@ System.out.println(객체)는 오버라이드된 내용을 출력
 
 인스턴스 생성 : new `바깥 클래스.중첩클래스`()
 클래스 이름(getClass()) : 바깥 클래스$중첩클래스
+
+중첩클래스는, 같은 클래스에 있으니 
+-정적 중첩 클래스의 활용하면 `private` 접근 제어자에 접근할 수 있다.
+-캡슐화
+
+## 5/15(목)
+:black_heart: AWS Summit 2025 Seoul
+
+:purple_heart: Java Review
