@@ -212,9 +212,11 @@ System.out.println(객체)는 오버라이드된 내용을 출력
 
 중첩클래스는, 같은 클래스에 있으니 
 -정적 중첩 클래스의 활용하면 `private` 접근 제어자에 접근할 수 있다.
--캡슐화
+-캡슐화 가능
 
 ## 5/15(목)
 :black_heart: AWS Summit 2025 Seoul
 
+## 5/16(금)
 :purple_heart: Java Review
+> 예외처리
