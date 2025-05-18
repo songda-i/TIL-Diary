@@ -262,3 +262,63 @@ System.out.println(객체)는 오버라이드된 내용을 출력
 :purple_heart: Java Review
 
 > 중첩(Nested)클래스, 내부(Inner)클래스
+
+실무) 중첩은 `static` 클래스만 쓰기 (권장)
+
+```java
+// 내부클래스
+public class Car {
+
+    private String model;
+    private int chargeLevel;
+    private Engine engine;
+
+    public Car(String model, int chargeLevel) {
+        this.model = model;
+        this.chargeLevel = chargeLevel;
+        this.engine = new Engine();
+    }
+    public void start() {
+        engine.start();
+        System.out.println(model + " 시작 완료");
+    }
+    // 내부클래스
+    private class Engine {
+        private void start() {
+            System.out.println("충전 레벨 확인: " + chargeLevel);
+            System.out.println(model + "의 엔진을 구동합니다.");
+        }
+    }
+}
+```
+
+```java
+//  중첩(Nested)클래스 (static 변형 권장)
+public class Car {
+
+    private String model;
+    private int chargeLevel;
+    private Engine engine;
+
+    public Car(String model, int chargeLevel) {
+        this.model = model;
+        this.chargeLevel = chargeLevel;
+        this.engine = new Engine(this);
+    }
+    public void start() {
+        engine.start();
+        System.out.println(model + " 시작 완료");
+    }
+    //  중첩(Nested)클래스
+    private static class Engine {
+        private Car car;
+        public Engine(Car car) {
+            this.car = car;
+        }
+        private void start() {
+            System.out.println("충전 레벨 확인: " + car.chargeLevel);
+            System.out.println(car.model + "의 엔진을 구동합니다.");
+        }
+    }
+}
+```
