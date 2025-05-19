@@ -322,3 +322,8 @@ public class Car {
     }
 }
 ```
+
+## 5/19(월)
+:purple_heart: Java Review
+
+내부클래스 - 지역변수캡처 : 지역 클래스가 접근하는 지역 변수의 값은 변경하면 안된다
