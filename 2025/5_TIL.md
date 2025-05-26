@@ -355,3 +355,39 @@ public class Car {
 
 부모클래스/인터페이스이름 인스턴스이름 = new 부모클래스/인터페이스이름() {클래스내용 Body} 
 ```
+
+## 5/25(일)
+:purple_heart: Java Review
+> 제네릭(Generic) `<T>`
+
+- 제네릭 타입 : 제네릭 클래스, 제네릭 인터페이스
+    - 타입 : 기본형, 클래스, 인터페이스
+
+- 제네릭을 쓰는 이유
+    - 타입 안정성
+    - 코드 재사용 
+
+```java
+// 제네릭 클래스 정의
+class GenericBox<T>
+
+// new 객체 생성 : 제네릭의 타입을 선언 `결정`
+new GenericBox<Integer>()
+
+// 제네릭 변수 선언 = new 객체 생성<>
+GenericBox<Integer> integerBox1 = new GenericBox<Integer>() // 타입 직접 입력
+GenericBox<Integer> integerBox2 = new GenericBox<>(); // 타입 추론 (생략 가능) // 권장
+GenericBox integerBox3 = new GenericBox();  // Raw Type 원시타입
+```
+
+- 용어
+    - 메서드는 `매개변수`에 `인자`를 전달해서 사용할 값을 결정한다.
+    - 제네릭 클래스는 `타입 매개변수`에 `타입 인자`를 전달해서 사용할 타입을 결정한다.
+        - 타입 매개변수 : `<T>`의 T (T말고 어떤 글자든 OK) 
+            - 제네릭의 타입 매개변수는 사용할 타입에 대한 `결정`을 나중으로 미루는 것
+            -  해당 클래스를 실제 사용하는 생성 시점에, 내부에서 사용할 타입을 결정하는 것
+        - 타입 인자 : 실제 타입
+            - 기본형 X (int, double ...)
+            - 래퍼클래스 O (Integer, Double, String ...)
+
+- Raw Type 원시타입 : 옛 자바 하위 호환용, 내부 타입 변수가 Object 사용됨
