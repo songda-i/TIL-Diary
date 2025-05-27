@@ -391,3 +391,24 @@ GenericBox integerBox3 = new GenericBox();  // Raw Type 원시타입
             - 래퍼클래스 O (Integer, Double, String ...)
 
 - Raw Type 원시타입 : 옛 자바 하위 호환용, 내부 타입 변수가 Object 사용됨
+
+## 5/26(월)
+:purple_heart: Java Review
+> 제네릭(Generic) `<T>`
+- 타입 매개변수 제한  `<T extends 특정클래스(상한)>`
+    - 매개변수 체크 가능 (컴파일 오류 발생해줘서)
+    - 반환값을 다운캐스팅 안해도 됨
+
+## 5/27(화)
+:purple_heart: Java Review
+- 제네릭 타입
+    - 정의: `GenericClass<T>`
+    - 타입 인자 전달: 객체를 생성하는 시점
+        - 예) `new GenericClass<String>`
+
+- 제네릭 메서드
+    - 정의: `<T> T genericMethod(T t)`
+    - 타입 인자 전달: 메서드를 호출하는 시점
+        - 예) `GenericMethod.<Integer>genericMethod(i)`
+    - 사용: 제네릭 메서드는 클래스 전체가 아니라 특정 메서드 단위로 제네릭을 도입할 때 사용
+    - 반환타입 : 메서드명 바로 왼쪽 T1
