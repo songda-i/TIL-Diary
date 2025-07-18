@@ -140,8 +140,8 @@ A a2 = appConfig.getBean(A.class);
     - placeholder
 
 - type 들어가는 값의 종류
-    - `<label>`
-    - `<button>`
+    - `<input>` : text, button, checkbox, radio, file, reset, submit ...
+    - `<button>` : submit, button, reset
 
 :green_heart: Spring
 - @RequestMapping
@@ -154,4 +154,10 @@ A a2 = appConfig.getBean(A.class);
     = @GetMapping(path="/")
     - @RequestMapping(path="/",method={RequestMethod.GET, RequestMethod.POST})
 
+## 7/16(목)
+:crescent_moon: HTML&CSS 
+- `<!doctype html>` , `xmlns` xml name space 
+- `th:` 타임리프 문법 나올 때 , `${}` 인터폴레이션
 
+:green_heart: Spring
+- @RequestParams
