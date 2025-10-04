@@ -132,7 +132,7 @@ A a2 = appConfig.getBean(A.class);
 - 단점 : 의존성 증가, private 생성자로 상속 제한, 테스트 어려움, 멀티스레드 환경에서의 문제
 - 주의점 : 객체 상태를 유지(stateful)하게 설계하면 안됨
 
-## 7/15(수)
+## 7/15(화)
 :crescent_moon: HTML&CSS 레퍼런스 https://developer.mozilla.org/
   - `<label>` 와 연관 `<input>`or `<textarea>` element
     - `<label>` element 기능 : 연관 element의 check 범위 늘려줌
@@ -154,10 +154,38 @@ A a2 = appConfig.getBean(A.class);
     = @GetMapping(path="/")
     - @RequestMapping(path="/",method={RequestMethod.GET, RequestMethod.POST})
 
-## 7/16(목)
+## 7/16(수)
 :crescent_moon: HTML&CSS 
 - `<!doctype html>` , `xmlns` xml name space 
 - `th:` 타임리프 문법 나올 때 , `${}` 인터폴레이션
 
 :green_heart: Spring
-- @RequestParams
+- @RequestParam
+    - url https:// ... ?`xparam=value`& ...
+        - (@RequestParam String xparam)
+        - (@RequestParam("xparam") String xparam)
+        - (@RequestParam(name="xparam") String xparam)
+
+```java
+// 예전 방식
+@RequestMapping("/save")
+public ModelAndView save(HttpServletRequest request, HttpServletResponse response) {
+    String username = request.getParameter("username");
+    int age = Integer.parseInt(request.getParameter("age"));
+    ...
+}
+
+// @RequestParam 사용
+@PostMapping("/save")
+public String save(@RequestParam("username") String username, 
+                    @RequestParam("age") int age,
+                    Model model) {
+    ...
+}
+
+```
+
+## 7/18(금)
+:green_heart: Spring
+
+

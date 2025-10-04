@@ -246,7 +246,7 @@ System.out.println(객체)는 오버라이드된 내용을 출력
 :purple_heart: Java Review
 > 예외처리
 
-![alt text](image.png)
+![alt text](IMAGE/5_TIL_image.png)
 
 
 체크예외 : 컴파일러 체크, 명시적 처리 필요
