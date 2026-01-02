@@ -21,5 +21,8 @@
 
 ---
 
-## 1/1(수)
+## 1/1(목)
+:green_heart: AWS
+
+## 1/2(금)
 :green_heart: AWS
