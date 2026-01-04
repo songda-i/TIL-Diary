@@ -55,4 +55,8 @@
 
 ## 1/4(일)
 :green_heart: AWS
-- S3 
+- S3
+
+## 1/5(월)
+:green_heart: AWS
+- RDS
