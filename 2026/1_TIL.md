@@ -60,3 +60,11 @@
 ## 1/5(월)
 :green_heart: AWS
 - RDS
+
+## 1/6(화)
+:green_heart: AWS
+- RDS
+
+## 1/7(수)
+:green_heart: AWS
+- RDS
