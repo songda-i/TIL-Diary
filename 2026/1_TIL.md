@@ -67,4 +67,8 @@
 
 ## 1/7(수)
 :green_heart: AWS
-- RDS
+- Aurora
+
+## 1/8(목)
+:green_heart: AWS
+- CloudWatch
