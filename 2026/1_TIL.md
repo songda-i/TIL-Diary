@@ -72,3 +72,11 @@
 ## 1/8(목)
 :green_heart: AWS
 - CloudWatch
+
+## 1/12(월)
+:green_heart: AWS
+- CloudWatch
+
+## 1/16(금)
+:green_heart: AWS
+- 디커플링서비스
