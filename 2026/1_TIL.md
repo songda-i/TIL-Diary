@@ -80,3 +80,7 @@
 ## 1/16(금)
 :green_heart: AWS
 - 디커플링서비스
+
+## 1/19(월)
+:green_heart: AWS
+- Kinesis
